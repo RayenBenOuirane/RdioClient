@@ -1,7 +1,6 @@
 # backend/streamlit_agent_demo.py
 
 import streamlit as st
-from services.agents.rag_agent import generate_rag_script
 
 st.set_page_config(page_title="AI Radio Script Generator", layout="centered")
 
@@ -16,7 +15,6 @@ hosts = st.slider("Number of hosts", 1, 3, 2)
 if st.button("Generate Script"):
     with st.spinner("Generating..."):
         try:
-            script = generate_rag_script(topic, region, tone, hosts)
             st.success("✅ Script generated!")
             st.text_area("🎧 Script Output", script, height=500)
         except Exception as e:

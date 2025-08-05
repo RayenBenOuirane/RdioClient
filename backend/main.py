@@ -2,7 +2,8 @@
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from api import agents  # Import your agent routes (if any)
+from backend.api import agents  # ✅ Explicit path from root
+  # Import your agent routes (if any)
 
 app = FastAPI(
     title="AI Radio Backend",

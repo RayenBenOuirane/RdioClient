@@ -1,0 +1,50 @@
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.env/
+.venv/
+venv/
+ENV/
+env/
+
+# Environment variable files
+.env
+
+# Python-specific
+*.log
+*.sqlite3
+instance/
+db.sqlite3
+
+# FastAPI or Flask related
+*.db
+*.bak
+
+# Frontend build artifacts
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+
+# Media files (generated output)
+media/audio/
+media/video/
+media/scripts/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# VSCode and IDEs
+.vscode/
+.idea/
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Docker
+**/.dockerignore
+docker-compose.override.yml

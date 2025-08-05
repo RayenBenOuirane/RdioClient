@@ -1,0 +1,29 @@
+# Core backend
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+
+# Streamlit app
+streamlit
+
+# Web scraping
+beautifulsoup4
+requests
+
+# AI & LangChain
+openai
+langchain
+tiktoken  # required for token counting
+
+# Optional: Claude or other LLMs
+httpx  # used by LangChain and Claude integration
+
+# Vector DB (if using FAISS for RAG)
+faiss-cpu  # for local vector store (skip if not used)
+# or: chromadb
+
+# Dev & formatting
+black
+isort
+pytest

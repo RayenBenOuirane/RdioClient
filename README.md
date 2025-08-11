@@ -23,12 +23,13 @@ cd ai_radio_project
 Create a file named `.env` in the root of the project:
 
 ```env
-OPENAI_API_KEY=your-key-here
-ANTHROPIC_API_KEY=optional
 ELEVENLABS_API_KEY=optional
+GOOGLE_API_KEY=your-key-here
+GEMINI_MODEL=gemini-2.0-flash  
 ```
 ### b. Build and start the containers:
 ```env
 docker-compose build
 docker-compose up
 ```
+

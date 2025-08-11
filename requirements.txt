@@ -27,3 +27,5 @@ faiss-cpu  # for local vector store (skip if not used)
 black
 isort
 pytest
+
+google-generativeai  # for Google Gemini integration

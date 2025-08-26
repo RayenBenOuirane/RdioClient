@@ -62,7 +62,7 @@ export default function RadioDashboard() {
           <div className="space-y-6">
             <div className="flex items-center justify-between">
               <div>
-                <h1 className="text-3xl font-bold text-white">Radio Schedule</h1>
+                <h1 className="text-3xl font-bold ">Radio Schedule</h1>
                 <p className="text-gray-400">Manage your daily programming schedule</p>
               </div>
               <Button
@@ -122,7 +122,7 @@ export default function RadioDashboard() {
             >
               {sidebarOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
             </Button>
-            <div className="w-8 h-8 bg-[#FDD630] rounded-lg flex items-center justify-center">
+            <div className="w-8 h-8 bg-[#FAE381] rounded-lg flex items-center justify-center">
               <Radio className="w-5 h-5 text-black" />
             </div>
             {sidebarOpen && (
@@ -147,8 +147,8 @@ export default function RadioDashboard() {
                 onClick={() => setActiveTab(item.id)}
                 className={`w-full flex items-center space-x-3 px-3 py-3 rounded-lg text-left transition-colors ${
                   activeTab === item.id
-                    ? "bg-[#FDD630] text-black font-medium"
-                    : "text-gray-300 hover:bg-gray-800 hover:text-white"
+                    ? " bg-[#f2efef] text-black font-medium bg-"
+                    : "text-[#A1A1AA] hover:bg-gray-800 hover:text-white"
                 }`}
                 title={!sidebarOpen ? item.name : undefined}
               >

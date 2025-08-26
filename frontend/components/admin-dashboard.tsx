@@ -93,16 +93,6 @@ const currentShows = [
     status: "Recording",
     statusColor: "bg-orange-500",
   },
-    {
-    id: 4,
-    title: "Jazz Evening",
-    presenter: "AI Luna",
-    time: "20:00 Pm",
-    duration: "60m",
-    listeners: 0,
-    status: "Recording",
-    statusColor: "bg-green-500",
-  },
 ]
 
 const quickActions = [
@@ -151,8 +141,8 @@ export function AdminDashboard({ onCreateShow }: AdminDashboardProps) {
           <h1 className="text-3xl font-bold text-white">Admin Dashboard</h1>
           <p className="text-gray-400">Manage your AI-powered radio platform, create shows, and monitor performance</p>
         </div>
-          <Button onClick={onCreateShow} className="bg-[#F6F6F6] hover:bg-[#F6F6F6] text-black font-medium h-15 ">
-            <Plus className="w-4 h-4 mr-2" />
+          <Button onClick={onCreateShow} className="bg-[#f2efef] hover:bg-[#F6F6F6] text-black h-15 text-m font-semibold">
+            <Plus className="w-50" />
             Create Show
           </Button>
       </div>
@@ -192,7 +182,7 @@ export function AdminDashboard({ onCreateShow }: AdminDashboardProps) {
                   </div>
                   <span className="text-sm font-medium text-white">{item.value}%</span>
                 </div>
-                <div className="w-full bg-[#161616]  rounded-full h-2">
+                <div className="w-full bg-[#313340]  rounded-full h-2">
                   <div
                     className="bg-[#FAE381] h-2 rounded-full transition-all duration-300"
                     style={{ width: `${item.value}%` }}
@@ -220,11 +210,13 @@ export function AdminDashboard({ onCreateShow }: AdminDashboardProps) {
                     <Radio className="w-5 h-5 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-white">{show.title}</h3>
-                    <div className="flex items-center space-x-4 text-sm text-gray-400">
+                    <h3 className="font-semibold text-white text-m">{show.title}</h3>
+                    <div className="flex flex-col space-y-1 text-sm text-gray-400">
                       <span>{show.presenter}</span>
+                      <div className="flex items-center space-x-2"> 
                       <span>{show.time}</span>
                       <span>{show.duration}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -251,7 +243,7 @@ export function AdminDashboard({ onCreateShow }: AdminDashboardProps) {
           <p className="text-sm text-gray-400">Access your essential tools instantly</p>
         </CardHeader>
         <CardContent>
-          <div className="flex flex-col gap-4 p-4">
+          <div className="flex flex-col gap-4 p-15 ">
             {quickActions.map((action, index) => (
               <div
                 key={index}
@@ -262,8 +254,8 @@ export function AdminDashboard({ onCreateShow }: AdminDashboardProps) {
                   <action.icon className="w-5 h-5 text-black" />
                 </div>
                 <div className="min-w-0">
-                  <h3 className="font-semibold text-white text-sm">{action.title}</h3>
-                  <p className="text-xs text-gray-400 truncate">{action.description}</p>
+                  <h3 className="font-semibold text-white text-m">{action.title}</h3>
+                  <p className="text-sm text-gray-400 truncate">{action.description}</p>
                 </div>
               </div>
             ))}

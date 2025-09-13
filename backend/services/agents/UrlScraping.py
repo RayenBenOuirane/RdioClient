@@ -10,7 +10,7 @@ import time
 from pydub import AudioSegment
 from pydub.utils import which
 import base64
-import pandas as pd  # 📌 Import ajouté pour gérer le CSV
+import pandas as pd  
 
 # --- Vérification de FFMPEG ---
 AudioSegment.converter = which("ffmpeg")

@@ -7,8 +7,8 @@ from dotenv import load_dotenv
 
 import google.generativeai as genai
 
-from backend.models.agent_response import ScriptJSON
-from backend.utils.json_utils import try_parse_json
+from models.agent_response import ScriptJSON
+from utils.json_utils import try_parse_json
 from .prompt_templates import (
     SYSTEM_PROMPT,
     build_user_prompt_json,

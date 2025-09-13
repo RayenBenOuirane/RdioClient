@@ -1,0 +1,29 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.badge-yellow {
+  background-color: #ca8a04;
+  color: white;
+}
+
+.badge-green {
+  background-color: #16a34a;
+  color: white;
+}
+
+.badge-red {
+  background-color: #dc2626;
+  color: white;
+}
+
+.badge-gray {
+  background-color: #6b7280;
+  color: white;
+}

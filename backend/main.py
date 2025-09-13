@@ -2,7 +2,7 @@
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from backend.api import agents  # ✅ Explicit path from root
+from api import agents  # ✅ Explicit path from root
   # Import your agent routes (if any)
 
 app = FastAPI(

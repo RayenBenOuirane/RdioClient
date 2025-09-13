@@ -3,8 +3,10 @@
 from fastapi import APIRouter, HTTPException, Query
 from pydantic import BaseModel, Field
 from typing import Literal, Optional, Union
-from backend.services.agents.script_generator import generate_script
-from backend.models.agent_response import ScriptJSON
+from services.agents.script_generator import generate_script
+from models.agent_response import ScriptJSON
+from models.script_request import URLScriptRequest, URLScriptResponse
+from services.agents.script_from_url import generate_script_from_url_service
 
 router = APIRouter()
 
@@ -45,5 +47,17 @@ def api_generate_script(
             return {"format":"json","script": script}
         else:
             return {"format":"text","script": str(script)}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+router = APIRouter()
+
+@router.post("/generate-script-from-url", response_model=URLScriptResponse)
+def generate_script_from_url(req: URLScriptRequest):
+    try:
+        return generate_script_from_url_service(req)
+    except ValueError as e:
+        raise HTTPException(status_code=422, detail=str(e))
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
